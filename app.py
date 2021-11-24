@@ -147,17 +147,17 @@ def event_handle(event,json_line):
         line_bot_api.reply_message(rtoken, replyObj)
         return ''
 
-    if msgType == "text":
+   if msgType == "text":
         msg = str(event["message"]["text"])
-        if msg == "สวัสดี":
-            replyObj = TextSendMessage(text="ก็มาดิ ฮู้กๆ")
-            line_bot_api.reply_message(rtoken, replyObj)
-        elif msg == "ไปไหนดี":
-            replyObj = TextSendMessage(text="อยู่บ้านเถอะ")
-            line_bot_api.reply_message(rtoken, replyObj)
-        elif msg == "เหมียว":
-            replyObj = TextSendMessage(text="น้องแมว")
-            line_bot_api.reply_message(rtoken, replyObj)
+        if msg == "สวัสดีค่ะ":
+            replyObj = TextSendMessage(text="ครับ สวัสดีครับ🙏")
+            line_bot_api.reply_message(rtoken,replyObj)
+        elif msg == "ทำไรอยู่":
+            replyObj = TextSendMessage(text="คุยกับเธออยู่ไง")
+            line_bot_api.reply_message(rtoken,replyObj)
+        elif msg == "ทำไรอยู่":
+            replyObj = TextSendMessage(text="คุยกับเธออยู่ไง")
+            line_bot_api.reply_message(rtoken,replyObj)
         elif msg == "covid" :
             url = "https://covid19.ddc.moph.go.th/api/Cases/today-cases-all"
             response = requests.get(url)
