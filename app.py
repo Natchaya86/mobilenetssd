@@ -155,8 +155,8 @@ def event_handle(event,json_line):
         elif msg == "ทำไรอยู่":
             replyObj = TextSendMessage(text="คุยกับเธออยู่ไง")
             line_bot_api.reply_message(rtoken,replyObj)
-        elif msg == "ทำไรอยู่":
-            replyObj = TextSendMessage(text="คุยกับเธออยู่ไง")
+        elif msg == "คิดไรอยู่":
+            replyObj = TextSendMessage(text="คิดถึงuไง❤❤")
             line_bot_api.reply_message(rtoken,replyObj)
         else:
             headers = request.headers 
